@@ -7,7 +7,7 @@
  
 'use strict';
 var PureMask = function() {
-    var el = document.querySelector(".data");
+    var el = document.querySelector(".puremask");
 
     var maskForm = el.dataset.mask;
     el.maxLength = maskForm.length;
@@ -20,7 +20,7 @@ var PureMask = function() {
                    el.addEventListener('keydown', function (e){
 
                     if (e.keyCode === 8 || e.keyCode === 46) {
-                            console.log("Apertou Backspace ou DEL");
+                            
                         } else {
                             formatar(maskForm);
                         }
@@ -28,7 +28,7 @@ var PureMask = function() {
                     });
 
                     function formatar(mask){
-                        var element = document.querySelector(".data");;
+                        var element = document.querySelector(".puremask");;
 
                         var i = element.value.length;
 
