@@ -19,7 +19,7 @@ Para utilizar basta chamar o arquivo .js do plugin:
 <script src="puremask.min.js"></script>
 ```
 
-Adicionar a class puremask; Adicionar data-mask (Ex.: data-mask="##/##/####"), assim podendo personalizar sua mascara, lembrando que não é possível ultilizar parênteses ().
+Adicionar a class puremask; Adicionar data-mask (Ex.: data-mask="##/##/####"), assim podendo personalizar sua mascara, lembrando que não é possível ultilizar parênteses (), mas espaço, dois-pontos, barras e pontos pode.
 
 ```
 Data com hora = "##/##/#### ##:##"; 
