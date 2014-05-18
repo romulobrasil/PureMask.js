@@ -13,13 +13,19 @@ Biblioteca de mascaras em inputs de forms desenvolvido em Javascript puro.
 
 ## Como Utilizar
 
-Para utilizar basta chamar o arquivo .js do plugin:
+Para utilizar basta chamar o arquivo .js do plugin no footer:
 
 ```
 <script src="puremask.min.js"></script>
 ```
 
 Adicionar a class puremask; Adicionar data-mask (Ex.: data-mask="##/##/####"), assim podendo personalizar sua mascara, lembrando que não é possível ultilizar parênteses (), mas espaço, dois-pontos, barras e pontos pode.
+
+```
+<input type="text" class="puremask" data-mask="##/##/#### ##:##" >
+```
+
+### Alguns Exemplos:
 
 ```
 Data com hora = "##/##/#### ##:##"; 
