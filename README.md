@@ -30,4 +30,5 @@ Adicionar a class puremask; Adicionar data-mask (Ex.: data-mask="##/##/####"), a
 ```
 Data com hora = "##/##/#### ##:##"; 
 Data = "##/##/####";
+Telefone: ## ####.####;
 ```
