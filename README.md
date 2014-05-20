@@ -27,7 +27,7 @@ Adicionar data-mask (Ex.: data-mask="##/##/####");
 ```
 
 E também no footer:
-Vamos inicializar nossa função com dois paramentros sendo a primeira sua class e a segunda ativando o placeholder (se deixar em branco o segundo parametro e setar false não ativará o placeholder). 
+vamos inicializar nossa função com dois paramentros sendo a primeira sua class e a segunda ativando o placeholder (se deixar em branco o segundo parametro ou setar false não ativará o placeholder). 
 
 ```
 <script>
