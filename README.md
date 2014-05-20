@@ -19,16 +19,35 @@ Para utilizar basta chamar o arquivo .js do plugin no footer:
 <script src="puremask.min.js"></script>
 ```
 
-Adicionar a class puremask; Adicionar data-mask (Ex.: data-mask="##/##/####"), assim podendo personalizar sua mascara, lembrando que não é possível ultilizar parênteses (), mas espaços, dois-pontos, barras e pontos pode.
+Adicionar a class com nome de sua preferencia;
+Adicionar data-mask (Ex.: data-mask="##/##/####");
 
 ```
-<input type="text" class="puremask" data-mask="##/##/#### ##:##" >
+<input type="text" class="sua-class" data-mask="##/##/#### ##:##" >
+```
+
+E também no footer:
+Função com dois paramentros sendo a primeira sua class e a segunda ativando o placeholder (se deixar em branco o segundo parametro e setar false não ativará o placeholder). 
+
+```
+<script>
+    PureMask.format(".telefone", true);    
+    PureMask.format(".cpf", true);    
+</script>
 ```
 
 ### Alguns Exemplos:
 
 ```
-Data com hora = "##/##/#### ##:##"; 
-Data = "##/##/####";
-Telefone: ## ####.####;
+Data com hora    : data-mask="##/##/#### ##:##"
+Data             : data-mask="##/##/####"
+Tempo            : data-mask="##:##:##"
+Tempo com siglas : data-mask="##h##m"
+CEP              : data-mask="#####-###"
+Telefone com DDD : data-mask="(##) ####-####"
+CPF              : data-mask="###.###.###-#"
+CNPJ             : data-mask="##.###.###/####-##"
+Dinheiro         : data-mask="###.###.###.###.###.###,##"
+Mixed            : data-mask="AAA ###-###"
+Placa de Carro   : data-mask="AAA ####"
 ```
