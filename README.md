@@ -1,7 +1,7 @@
 <p align="center">
-  <a href="http://romulobrasil.com">
-    <img height="220" width="300" src="http://romulobrasil.com/wp-content/themes/romulobrasil.com/img/logo.png"/>
-  </a>
+    <a href="https://romulobrasil.com" target="_blank" title="Acessar o site Rômulo Brasil">
+        <img width="200" height="146" src="https://romulobrasil.com/img/logo.png"/>
+    </a>
 </p>
 
 
