@@ -7,14 +7,15 @@
 <body>
     
     <form >
-        <input type="text" class="telefone" data-mask="(##) ####-####">
+        <input type="text" class="telefone" data-masks="(##) ####-####">
         <input type="text" class="cpf" data-mask="###.###.###-##">
     </form>
     
-    <script src="puremask.min.js"></script>
-    <script>
-        PureMask.format(".telefone", true);    
+    <script src="src/js/puremask.js"></script>
+    <script> 
+        PureMask.format(".telefosne", true);    
         PureMask.format(".cpf", true);    
+          
     </script>
     
     
