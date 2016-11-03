@@ -1,5 +1,5 @@
 /* ========================================================================
- * Pure Mask JS: puremask.js v0.3
+ * Pure Mask JS: puremask.js v0.3.1
  * https://romulobrasil.com
  * Copyright (c) 2016 Rômulo Brasil
  * ========================================================================
@@ -30,7 +30,7 @@ var PureMask = function() {
             
             var e = el.value.length;
             
-            el.addEventListener('keydown', function (e){
+            el.addEventListener('keypress', function (e){
                 if (e.keyCode !== 8 || e.keyCode !== 46) {   
                     formato(maskForm);
                 }
