@@ -9,7 +9,8 @@
 var PureMask = function() {
     return {
         format : function(element, placeholder) {            
-            var el = document.querySelector(element);
+            if (element.nodeType > 0) var el = element
+            else var el = document.querySelector(element);
             var maskForm = '';
             
             if (el === undefined || el === null) {
