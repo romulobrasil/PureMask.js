@@ -51,3 +51,9 @@ Dinheiro         : data-mask="###.###.###.###.###.###,##"
 Mixed            : data-mask="AAA ###-###"
 Placa de Carro   : data-mask="AAA ####"
 ```
+
+### Como instalar com bower
+
+```
+bower install puremaskjs
+```
