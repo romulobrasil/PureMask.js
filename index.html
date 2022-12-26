@@ -1,20 +1,29 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <title>pureMask by Rômulo Brasil</title>    
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PureMask.js by Rômulo Brasil</title>
 </head>
 <body>
-    
-    <form >
-        <input type="text" class="telefone" data-mask="(##) ####-####">
-        <input type="text" class="cpf" data-mask="###.###.###-##">
-    </form>
-    
-    <script src="src/js/puremask.js"></script>
-    <script> 
-        PureMask.format(".telefone", true);    
-        PureMask.format(".cpf", true);    
-    </script>
+  <form>
+    <input type="text" class="mask data-com-hora" data-mask="##/##/#### ##:##">
+    <input type="text" class="mask data" data-mask="##/##/####">
+    <input type="text" class="mask tempo" data-mask="##:##:##">
+    <input type="text" class="mask tempo-com-siglas" data-mask="##h##m">
+    <input type="text" class="mask CEP" data-mask="#####-###">
+    <input type="text" class="mask telefone-DDD" data-mask="(##) ####-####">
+    <input type="text" class="mask CPF" data-mask="###.###.###-##">
+    <input type="text" class="mask CNPJ" data-mask="##.###.###/####-##">
+    <input type="text" class="mask dinheiro" data-mask="###.###.###.###.###.###,##">
+    <input type="text" class="mask mixed" data-mask="NNNN ###-###">
+    <input type="text" class="mask placa-carro" data-mask="AAA ####">
+    <input type="text" class="mask placa-carro-novo" data-mask="AAA#A##">
+  </form>
+  <script src="puremask.js"></script>
+  <script>
+    PureMask.format('.mask', true);
+  </script>
 </body>
 </html>
