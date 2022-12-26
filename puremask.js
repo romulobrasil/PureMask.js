@@ -20,7 +20,7 @@ const PureMask = {
         if(placeholder){
           el.placeholder = el.dataset.mask;
         }
-        el.addEventListener('keypress', e => {
+        el.addEventListener('keydown', e => {
           if(e.keyCode !== 8 || e.keyCode !== 46) {
             this.applyMaskToValue(el, el.dataset.mask);
           }
