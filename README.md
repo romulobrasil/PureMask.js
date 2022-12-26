@@ -45,6 +45,10 @@ Placa de Carro      : data-mask="AAA ####"
 Placa de Carro Nova : data-mask="AAA#A##"
 ```
 
+## Placeholder
+
+Caso queira colocar o data-mask como placeholder, basta adicionar o true como segundo paramentro.
+
 ### Como instalar com bower
 
 ```
