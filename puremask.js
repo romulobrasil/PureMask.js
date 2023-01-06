@@ -1,23 +1,24 @@
 /* ============================================
- * Pure Mask JS: puremask.js v1.0.1
+ * Pure Mask JS: puremask.js v1.0.2
  * https://romulobrasil.com
- * Copyright (c) 2016-2022 Rômulo Brasil
+ * Copyright (c) 2016-2023 Rômulo Brasil
  * ============================================
  */
 const PureMask = {
   logs: {
     element: 'PureMask.js: favor declarar o elemento que vai receber a mascara.',
-    mask: 'PureMask.js: data-mask não foi declarada na tag com a class.',
+    mask: 'PureMask.js: data-mask não foi declarada na tag abaixo: ',
   },
   format(element, placeholder){
-    const els = document.querySelector(element);
+    const els = document.getElementsByClassName(element);
     if(!els){
       console.log(this.logs['element']);
-    } else if(!els.dataset.mask) {
-      console.log(this.logs['mask']);
     } else {
-      Array.from(els.parentElement).forEach(el => {
-        if(placeholder){
+      Array.from(els).forEach(el => {
+        if(!el.dataset.mask) {
+          console.log(this.logs['mask']);
+          console.log(el);
+        } else if(placeholder){
           el.placeholder = el.dataset.mask;
         }
         el.addEventListener('keydown', e => {
