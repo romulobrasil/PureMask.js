@@ -54,3 +54,8 @@ Caso queira colocar o data-mask como placeholder, basta adicionar o true como se
 ```
 bower install puremaskjs
 ```
+
+## Demonstração
+
+Link para demonstração do plugin em ação com varios exemplos.
+<https://apps.romulobrasil.com/puremask>
