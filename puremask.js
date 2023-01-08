@@ -1,13 +1,19 @@
 /* ============================================
- * Pure Mask JS: puremask.js v1.0.2
+ * Pure Mask JS: puremask.js v1.0.3
  * https://romulobrasil.com
- * Copyright (c) 2016-2023 Rômulo Brasil
+ * Copyright (c) 2016-2023 Rmulo Brasil
  * ============================================
- */
+ */ 
 const PureMask = {
   logs: {
-    element: 'PureMask.js: favor declarar o elemento que vai receber a mascara.',
-    mask: 'PureMask.js: data-mask não foi declarada na tag abaixo: ',
+    element: 'PureMask.js: Please declare the element that will receive the mask.',
+    mask: 'PureMask.js: data-mask was not declared on the following tag: ',
+  },
+  maskFunctions: {
+    '#': (c) => /\d/.test(c),
+    'A': (c) => /[a-z]/i.test(c),
+    'N': (c) => /[a-z0-9]/i.test(c),
+    'X': (c) => true,
   },
   format(element, placeholder){
     const els = document.getElementsByClassName(element);
@@ -30,43 +36,23 @@ const PureMask = {
     }
   },
   applyMaskToValue(el, mask){
-    let txt = '';
-    let c, m;
+    let formattedText = '';
+    let currentChar, maskChar;
 
-    for (let i = 0, x = 1; x && i < mask.length-1; ++i) {
-      c = el.value.charAt(i);
-      m = mask.charAt(i);
+    for (let i = 0, isValid = true; isValid && i < mask.length - 1; ++i) {
+      currentChar = el.value.charAt(i);
+      maskChar = mask.charAt(i);
 
-      switch (mask.charAt(i)) {
-        case '#' :
-          if (/\d/.test(c)) {
-            txt += c;
-          } else {
-            x = 0;
-          }
-          break;
-        case 'A' :
-          if (/[a-z]/i.test(c)) {
-            txt += c;
-          } else {
-            x = 0;
-          }
-          break;
-        case 'N' :
-          if (/[a-z0-9]/i.test(c)) {
-            txt += c;
-          } else {
-            x = 0;
-          }
-          break;
-        case 'X' :
-          txt += c;
-          break;
-        default  :
-          txt += m;
-          break;
+      if (this.maskFunctions[maskChar]) {
+        if (this.maskFunctions[maskChar](currentChar)) {
+          formattedText += currentChar;
+        } else {
+          isValid = false;
+        }
+      } else {
+        formattedText += maskChar;
       }
     }
-    el.value = txt;
+    el.value = formattedText;
   },
 }
